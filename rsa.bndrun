@@ -1,6 +1,7 @@
 -standalone: \
     https://raw.githubusercontent.com/bndtools/bundle-hub/master/index.xml.gz,\
-    file:///home/cschneider/.m2/repository/org/apache/aries/rsa/repository/1.8-SNAPSHOT/repository-1.8-SNAPSHOT.xml.gz
+    https://repository.apache.org/content/groups/snapshots/org/apache/aries/rsa/repository/1.8-SNAPSHOT/repository-1.8-20160322.103903-3.xml.gz
+#    file:///home/cschneider/.m2/repository/org/apache/aries/rsa/repository/1.8-SNAPSHOT/repository-1.8-SNAPSHOT.xml.gz
 
 -runsystemcapabilities: ${native_capability}
 

@@ -3,13 +3,6 @@
 This example packages Aries RSA and the EchoTCP example first as two runnable jars using bndtools
 and in a second step as two docker images.
 
-## Prerequisite
-
-Currently the repository build of Aries rsa is not yet working on the CI server.
-So you have to checkout aries-rsa and build it locally.
-Then adapt the respository path in rsa.bndrun to the path of your local maven repo.
-Later this will point to an Aries rsa release repo.
-
 ## Build
 
 The build is currently not fully automated. So you will have to do these steps manually:
