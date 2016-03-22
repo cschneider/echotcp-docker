@@ -7,6 +7,9 @@
 
 -resolve.effective: active;skip:="osgi.service"
 
+-runblacklist: \
+    osgi.identity;filter:='(osgi.identity=slf4j.api)'
+
 rsa-required:\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\

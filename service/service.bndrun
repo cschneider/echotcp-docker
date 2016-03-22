@@ -32,8 +32,4 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.provider.tcp)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.core)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.topology-manager)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.examples.echotcp.service)'
-
--runrepos: \
-	_2,\
-	_1
+	osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.examples.echotcp.service)',\
