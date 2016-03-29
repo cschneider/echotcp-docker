@@ -15,3 +15,4 @@ generated/
 .project
 .settings/
 /.Readme.md.html
+/target

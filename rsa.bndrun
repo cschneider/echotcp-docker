@@ -1,7 +1,4 @@
--standalone: \
-    https://raw.githubusercontent.com/bndtools/bundle-hub/master/index.xml.gz,\
-    https://repository.apache.org/content/groups/snapshots/org/apache/aries/rsa/repository/1.8-SNAPSHOT/repository-1.8-20160328.040715-10.xml.gz
-#    file:///home/cschneider/.m2/repository/org/apache/aries/rsa/repository/1.8-SNAPSHOT/repository-1.8-SNAPSHOT.xml.gz
+-standalone: file:///home/cschneider/checkout/echotcp-docker/target/index.xml.gz
 
 -runsystemcapabilities: ${native_capability}
 
@@ -19,7 +16,7 @@ rsa-required:\
     osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.topology-manager)',\
     osgi.identity;filter:='(osgi.identity=org.apache.aries.rsa.examples.echotcp.service)'
 	
--runfw: org.apache.felix.framework;version='[5.2.0,5.2.0]'
+-runfw: org.apache.felix.framework;version='[5.4.0,5.4.0]'
 -runee: JavaSE-1.8
 
 -runproperties: \
