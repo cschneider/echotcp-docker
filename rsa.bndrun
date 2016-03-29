@@ -1,4 +1,4 @@
--standalone: file:///home/cschneider/checkout/echotcp-docker/target/index.xml.gz
+-standalone: target/index.xml.gz
 
 -runsystemcapabilities: ${native_capability}
 
