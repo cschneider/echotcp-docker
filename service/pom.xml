@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.lr</groupId>
+	<artifactId>echotcp-docker-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.14.2</version>
+				<configuration>
+					<logDate>default</logDate>
+					<autoPull>true</autoPull>
+					<images>
+						<image>
+							<alias>service</alias>
+							<name>cschneider/${project.artifactId}:${project.version}</name>
+							<build>
+								<from>jeanblanchard/busybox-java:8</from>
+								<assembly>
+									<descriptor>${basedir}/src/main/fabric8/assembly.xml</descriptor>
+								</assembly>
+								<ports>
+									<port>8201</port>
+									<port>2181</port>
+								</ports>
+								<entryPoint><shell>java -jar /app/service.jar -Daries.rsa.hostname=service</shell></entryPoint>
+							</build>
+
+							<!-- ............................................................... -->
+							<!-- Runtime configuration for starting/stopping/linking containers -->
+							<!-- ............................................................... -->
+							<run>
+								<!-- Assign dynamically mapped ports to maven variables (which can 
+									be reused in integration tests) -->
+								<ports>
+									<port>tomcat.port:8080</port>
+								</ports>
+								<wait>
+									<!-- Check for this URL to return a 200 return code .... -->
+									<url>http://${docker.host.address}:${tomcat.port}/access</url>
+									<!-- ... but at max 10 seconds -->
+									<time>10000</time>
+								</wait>
+								<links>
+									<!-- Links can be referenced via alias (db) or name (postgres:9). 
+										If no link-alias (second "db") is given it takes the first part (first "db") 
+										as link alias. So, <link>db</link> would be enough here -->
+									<link>db:db</link>
+								</links>
+								<log>
+									<prefix>TC</prefix>
+									<color>cyan</color>
+								</log>
+							</run>
+						</image>
+					</images>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

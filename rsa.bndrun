@@ -1,4 +1,4 @@
--standalone: ../target/index.xml.gz
+-standalone: ${.}/target/index.xml.gz
 
 -runsystemcapabilities: ${native_capability}
 
