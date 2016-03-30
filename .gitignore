@@ -14,5 +14,5 @@ hs_err_pid*
 generated/
 .project
 .settings/
-/.Readme.md.html
-/target
+.Readme.md.html
+target/
