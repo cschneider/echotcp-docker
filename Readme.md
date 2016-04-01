@@ -1,4 +1,4 @@
-# Running the EchoTCP example from Aries rsa on docker containers
+# Running the EchoTCP example from Aries rsa on docker containers and using bndtools to resolve against a repository
 
 This example packages Aries RSA and the EchoTCP example first as two runnable jars using bndtools
 and in a second step as two docker images.
