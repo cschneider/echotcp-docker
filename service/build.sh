@@ -1,1 +1,1 @@
-docker build -t cschneider/echotcp.service .
+docker build -t echotcp.service .

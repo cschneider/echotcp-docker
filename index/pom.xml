@@ -73,12 +73,12 @@
         <dependency>
             <groupId>org.apache.aries.rsa.examples.echotcp</groupId>
             <artifactId>org.apache.aries.rsa.examples.echotcp.service</artifactId>
-            <version>1.8-SNAPSHOT</version>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.rsa.examples.echotcp</groupId>
             <artifactId>org.apache.aries.rsa.examples.echotcp.consumer</artifactId>
-            <version>1.8-SNAPSHOT</version>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>org.apache.aries.rsa</groupId>
             <artifactId>repository</artifactId>
-            <version>1.8-SNAPSHOT</version>
+            <version>1.8.0</version>
             <type>pom</type>
         </dependency>
     </dependencies>
